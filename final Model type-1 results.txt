@@ -1,0 +1,90 @@
+--- 7.1 Loading Data and Building Vocabulary ---
+Loading captions from: /kaggle/input/guj-captions/gujarati_captions.txt
+Warning: Skipping malformed line 5657: '2173677067_9d0732bcc2.jpg#1'
+Loaded captions for 8092 unique images.
+Building SentencePiece vocabulary...
+SentencePiece vocabulary built. Size: 8000
+Vocabulary size: 8000
+Defined training and validation image transforms.
+
+--- 7.2 Splitting Data ---
+Verifying images: 100%|██████████| 8092/8092 [00:09<00:00, 812.76it/s]
+Found 8091 images common to captions and directory.
+Train images: 6472, Val images: 1619
+Dataset initialized with 32359 image-caption pairs.
+Dataset initialized with 8095 image-caption pairs.
+Train loader: 1012 batches. Val loader: 253 batches.
+
+--- 7.3 Initializing Model, Optimizer, Criterion, Scheduler ---
+Model initialized. Trainable params: 57,981,312
+
+--- 7.4 Starting Training Loop ---
+
+Epoch 1/20
+Epoch 1/20 [Training]: 100%|██████████| 1012/1012 [05:40<00:00,  2.97batch/s, avg_loss_batch=5.03, loss=4.21, lr=1.0e-04]
+Epoch 1 - Training Duration: 340.93 seconds (5.68 minutes)
+Epoch 1 - Average Training Loss: 5.0345
+
+Epoch 2/20
+Epoch 2/20 [Training]: 100%|██████████| 1012/1012 [05:31<00:00,  3.05batch/s, avg_loss_batch=4.3, loss=4.06, lr=1.0e-04]
+Epoch 2 - Training Duration: 331.83 seconds (5.53 minutes)
+Epoch 2 - Average Training Loss: 4.3021
+
+Epoch 3/20
+Epoch 3/20 [Training]: 100%|██████████| 1012/1012 [05:35<00:00,  3.02batch/s, avg_loss_batch=4.03, loss=4.44, lr=1.0e-04]
+Epoch 3 - Training Duration: 335.24 seconds (5.59 minutes)
+Epoch 3 - Average Training Loss: 4.0261
+
+Epoch 4/20
+Epoch 4/20 [Training]: 100%|██████████| 1012/1012 [05:32<00:00,  3.04batch/s, avg_loss_batch=3.83, loss=3.21, lr=1.0e-04]
+Epoch 4 - Training Duration: 332.93 seconds (5.55 minutes)
+Epoch 4 - Average Training Loss: 3.8286
+
+Epoch 5/20
+Epoch 5/20 [Training]: 100%|██████████| 1012/1012 [05:35<00:00,  3.01batch/s, avg_loss_batch=3.67, loss=3.98, lr=1.0e-04]
+Epoch 5 - Training Duration: 335.80 seconds (5.60 minutes)
+Epoch 5 - Average Training Loss: 3.6747
+Epoch 5/20 [Validation] - Generating captions and calculating BLEU...
+Epoch 5/20 [Validation]: 100%|██████████| 253/253 [47:36<00:00, 11.29s/batch]
+Validation Results - Epoch 5: Avg Loss: 3.9647
+BLEU-1: 0.3176
+BLEU-2: 0.2090
+BLEU-3: 0.1201
+BLEU-4: 0.0744
+BLEU-4 improved from 0.0000 to 0.0744. Saving model...
+
+Epoch 6/20
+Epoch 6/20 [Training]: 100%|██████████| 1012/1012 [05:29<00:00,  3.07batch/s, avg_loss_batch=3.54, loss=4.05, lr=1.0e-04]
+Epoch 6 - Training Duration: 329.72 seconds (5.50 minutes)
+Epoch 6 - Average Training Loss: 3.5413
+
+Epoch 7/20
+Epoch 7/20 [Training]: 100%|██████████| 1012/1012 [05:30<00:00,  3.06batch/s, avg_loss_batch=3.42, loss=2.68, lr=1.0e-04]
+Epoch 7 - Training Duration: 330.96 seconds (5.52 minutes)
+Epoch 7 - Average Training Loss: 3.4220
+
+Epoch 8/20
+Epoch 8/20 [Training]: 100%|██████████| 1012/1012 [05:26<00:00,  3.10batch/s, avg_loss_batch=3.31, loss=2.92, lr=1.0e-04]
+Epoch 8 - Training Duration: 326.46 seconds (5.44 minutes)
+Epoch 8 - Average Training Loss: 3.3128
+
+Epoch 9/20
+Epoch 9/20 [Training]: 100%|██████████| 1012/1012 [05:28<00:00,  3.08batch/s, avg_loss_batch=3.21, loss=3.4, lr=1.0e-04]
+Epoch 9 - Training Duration: 328.80 seconds (5.48 minutes)
+Epoch 9 - Average Training Loss: 3.2131
+
+Epoch 10/20
+Epoch 10/20 [Training]: 100%|██████████| 1012/1012 [05:25<00:00,  3.11batch/s, avg_loss_batch=3.12, loss=3.32, lr=1.0e-04]
+Epoch 10 - Training Duration: 325.44 seconds (5.42 minutes)
+Epoch 10 - Average Training Loss: 3.1161
+Epoch 10/20 [Validation] - Generating captions and calculating BLEU...
+Epoch 10/20 [Validation]: 100%|██████████| 253/253 [48:57<00:00, 11.61s/batch]
+Validation Results - Epoch 10: Avg Loss: 3.9560
+BLEU-1: 0.3146
+BLEU-2: 0.2051
+BLEU-3: 0.1185
+BLEU-4: 0.0732
+BLEU-4 did not improve. Best: 0.0744. No improvement for 1 eval cycles.
+Early stopping after 5 epochs without BLEU-4 improvement.
+
+Training finished. Total training time: 2h 31m 55.03s

@@ -1,0 +1,131 @@
+--- 6.1 Loading Data and Building Vocabulary ---
+Loading captions from: /kaggle/input/guj-captions/gujarati_captions.txt
+Loaded captions for 8092 unique images.
+Building SentencePiece vocabulary...
+SentencePiece vocabulary built. Size: 8000
+Vocabulary size: 8000
+
+--- 6.2 Splitting Data ---
+Verifying images: 100%|██████████| 8092/8092 [00:17<00:00, 466.47it/s]
+Found 8091 images common to captions and directory.
+Train images: 6472, Val images: 1619
+Dataset initialized with 32359 image-caption pairs.
+Dataset initialized with 8095 image-caption pairs.
+Train loader: 1012 batches. Val loader: 253 batches.
+
+--- 6.3 Initializing Model, Optimizer, Criterion, Scheduler ---
+
+Total trainable parameters: 112,991,872
+
+--- 6.4 Starting Training Loop ---
+
+Epoch 1/20
+
+Epoch 1/20 [Training]: 100%|██████████| 1012/1012 [05:23]
+Epoch 1 - Average Training Loss: 4.8687
+
+Epoch 2/20
+Epoch 2/20 [Training]: 100%|██████████| 1012/1012 [05:20]
+Epoch 2 - Average Training Loss: 4.1258
+
+Epoch 3/20
+Epoch 3/20 [Training]: 100%|██████████| 1012/1012 [05:20]
+Epoch 3 - Average Training Loss: 3.8146
+
+Epoch 4/20
+Epoch 4/20 [Training]: 100%|██████████| 1012/1012 [05:20]
+Epoch 4 - Average Training Loss: 3.5893
+
+Epoch 5/20
+Epoch 5/20 [Training]: 100%|██████████| 1012/1012 [05:20]
+Epoch 5 - Average Training Loss: 3.3982
+Epoch 5/20 [Validation]: 100%|██████████| 253/253 [27:55]
+Validation Results - Epoch 5: Avg Loss: 3.9435
+BLEU-1: 0.3235
+BLEU-2: 0.2113
+BLEU-3: 0.1183
+BLEU-4: 0.0713
+BLEU-4 improved from 0.0000 to 0.0713. Saving model...
+
+Epoch 6/20
+Epoch 6/20 [Training]: 100%|██████████| 1012/1012 [05:20<]
+Epoch 6 - Average Training Loss: 3.2310
+
+Epoch 7/20
+Epoch 7/20 [Training]: 100%|██████████| 1012/1012 [05:20]
+Epoch 7 - Average Training Loss: 3.0794
+
+Epoch 8/20
+Epoch 8/20 [Training]: 100%|██████████| 1012/1012 [05:20]
+Epoch 8 - Average Training Loss: 2.9394
+
+Epoch 9/20
+Epoch 9/20 [Training]: 100%|██████████| 1012/1012 [05:20]
+Epoch 9 - Average Training Loss: 2.8069
+
+Epoch 10/20
+Epoch 10/20 [Training]: 100%|██████████| 1012/1012 [05:21]
+Epoch 10 - Average Training Loss: 2.6897
+Epoch 10/20 [Validation]: 100%|██████████| 253/253 [27:59]
+Validation Results - Epoch 10: Avg Loss: 4.0485
+BLEU-1: 0.3158
+BLEU-2: 0.2030
+BLEU-3: 0.1136
+BLEU-4: 0.0669
+BLEU-4 did not improve. Best: 0.0713. No improvement epochs: 1/5
+
+Epoch 11/20
+Epoch 11/20 [Training]: 100%|██████████| 1012/1012 [05:20]
+Epoch 11 - Average Training Loss: 2.5787
+
+Epoch 12/20
+Epoch 12/20 [Training]: 100%|██████████| 1012/1012 [05:20]
+Epoch 12 - Average Training Loss: 2.4790
+
+Epoch 13/20
+Epoch 13/20 [Training]: 100%|██████████| 1012/1012 [05:20]
+Epoch 13 - Average Training Loss: 2.3925
+
+Epoch 14/20
+Epoch 14/20 [Training]: 100%|██████████| 1012/1012 [05:20]
+Epoch 14 - Average Training Loss: 2.3140
+
+Epoch 15/20
+Epoch 15/20 [Training]: 100%|██████████| 1012/1012 [05:20]
+Epoch 15 - Average Training Loss: 2.2486
+Epoch 15/20 [Validation]: 100%|██████████| 253/253 [28:56]
+Validation Results - Epoch 15: Avg Loss: 4.2464
+BLEU-1: 0.3138
+BLEU-2: 0.2003
+BLEU-3: 0.1098
+BLEU-4: 0.0646
+BLEU-4 did not improve. Best: 0.0713. No improvement epochs: 2/5
+
+Epoch 16/20
+Epoch 16/20 [Training]: 100%|██████████| 1012/1012 [05:20]
+Epoch 16 - Average Training Loss: 2.1895
+
+Epoch 17/20
+Epoch 17/20 [Training]: 100%|██████████| 1012/1012 [05:20]
+Epoch 17 - Average Training Loss: 2.1377
+
+Epoch 18/20
+Epoch 18/20 [Training]: 100%|██████████| 1012/1012 [05:20]
+Epoch 18 - Average Training Loss: 2.0952
+
+Epoch 19/20
+Epoch 19/20 [Training]: 100%|██████████| 1012/1012 [05:20]
+Epoch 19 - Average Training Loss: 2.0612
+
+Epoch 20/20
+Epoch 20/20 [Training]: 100%|██████████| 1012/1012 [05:20]
+Epoch 20 - Average Training Loss: 2.0304
+Epoch 20/20 [Validation]: 100%|██████████| 253/253 [29:21]
+Validation Results - Epoch 20: Avg Loss: 4.3514
+BLEU-1: 0.3124
+BLEU-2: 0.2009
+BLEU-3: 0.1100
+BLEU-4: 0.0639
+BLEU-4 did not improve. Best: 0.0713. No improvement epochs: 3/5
+
+Training finished.

@@ -1,0 +1,237 @@
+--- 6.1 Loading Data and Building Vocabulary ---
+Loading captions from: /kaggle/input/guj-captions/gujarati_captions.txt
+Loaded captions for 8092 unique images.
+Building vocabulary...
+Vocabulary built. Size: 8301
+Vocabulary size: 8301
+Stoi for <UNK>: 3
+
+--- 6.2 Splitting Data ---
+
+Verifying images: 100%|██████████| 8092/8092 [00:13<00:00, 585.97it/s]
+Found 8091 images common to captions and directory.
+Number of unique images for training: 6472
+Number of unique images for validation: 1619
+Dataset initialized with 32359 image-caption pairs.
+Dataset initialized with 8095 image-caption pairs.
+Train loader: 1012 batches. Validation loader: 253 batches.
+
+
+Total trainable parameters: 41,174,446
+
+--- 6.4 Starting Training Loop ---
+
+Epoch 1/20
+Epoch 1/20 [Training]: 100%|██████████| 1012/1012 [07:53]
+Epoch 1 - Average Training Loss: 5.5537
+Epoch 1/20 [Validation]: 100%|██████████| 253/253 [03:40]
+Validation Results - Epoch 1: Avg Loss: 4.9032
+BLEU-1: 0.2148
+BLEU-2: 0.0799
+BLEU-3: 0.0280
+BLEU-4: 0.0082
+BLEU-4 improved from 0.0000 to 0.0082. Saving model...
+
+Epoch 2/20
+Epoch 2/20 [Training]: 100%|██████████| 1012/1012 [07:51]
+Epoch 2 - Average Training Loss: 4.6814
+Epoch 2/20 [Validation]: 100%|██████████| 253/253 [03:58]
+Validation Results - Epoch 2: Avg Loss: 4.4237
+BLEU-1: 0.2483
+BLEU-2: 0.1201
+BLEU-3: 0.0600
+BLEU-4: 0.0294
+BLEU-4 improved from 0.0082 to 0.0294. Saving model...
+
+Epoch 3/20
+Epoch 3/20 [Training]: 100%|██████████| 1012/1012 [07:51]
+Epoch 3 - Average Training Loss: 4.2551
+Epoch 3/20 [Validation]: 100%|██████████| 253/253 [03:47]
+Validation Results - Epoch 3: Avg Loss: 4.1388
+BLEU-1: 0.2418
+BLEU-2: 0.1232
+BLEU-3: 0.0684
+BLEU-4: 0.0384
+BLEU-4 improved from 0.0294 to 0.0384. Saving model...
+
+Epoch 4/20
+Epoch 4/20 [Training]: 100%|██████████| 1012/1012 [07:51]
+Epoch 4 - Average Training Loss: 3.9617
+Epoch 4/20 [Validation]: 100%|██████████| 253/253 [03:46]
+Validation Results - Epoch 4: Avg Loss: 3.9520
+BLEU-1: 0.2550
+BLEU-2: 0.1334
+BLEU-3: 0.0761
+BLEU-4: 0.0444
+BLEU-4 improved from 0.0384 to 0.0444. Saving model...
+
+Epoch 5/20
+Epoch 5/20 [Training]: 100%|██████████| 1012/1012 [07:51]
+Epoch 5 - Average Training Loss: 3.7411
+Epoch 5/20 [Validation]: 100%|██████████| 253/253 [03:51]
+Validation Results - Epoch 5: Avg Loss: 3.8197
+BLEU-1: 0.2628
+BLEU-2: 0.1372
+BLEU-3: 0.0798
+BLEU-4: 0.0480
+BLEU-4 improved from 0.0444 to 0.0480. Saving model...
+
+Epoch 6/20
+Epoch 6/20 [Training]: 100%|██████████| 1012/1012 [07:51]
+Epoch 6 - Average Training Loss: 3.5667
+Epoch 6/20 [Validation]: 100%|██████████| 253/253 [03:49]
+Validation Results - Epoch 6: Avg Loss: 3.7275
+BLEU-1: 0.2618
+BLEU-2: 0.1388
+BLEU-3: 0.0817
+BLEU-4: 0.0496
+BLEU-4 improved from 0.0480 to 0.0496. Saving model...
+
+Epoch 7/20
+Epoch 7/20 [Training]: 100%|██████████| 1012/1012 [07:51]
+Epoch 7 - Average Training Loss: 3.4183
+Epoch 7/20 [Validation]: 100%|██████████| 253/253 [03:43<00:00,  1.13batch/s]
+Validation Results - Epoch 7: Avg Loss: 3.6564
+BLEU-1: 0.2590
+BLEU-2: 0.1389
+BLEU-3: 0.0819
+BLEU-4: 0.0500
+BLEU-4 improved from 0.0496 to 0.0500. Saving model...
+
+Epoch 8/20
+Epoch 8/20 [Training]: 100%|██████████| 1012/1012 [07:51]
+Epoch 8 - Average Training Loss: 3.2906
+Epoch 8/20 [Validation]: 100%|██████████| 253/253 [03:52]
+Validation Results - Epoch 8: Avg Loss: 3.5924
+BLEU-1: 0.2639
+BLEU-2: 0.1408
+BLEU-3: 0.0838
+BLEU-4: 0.0517
+BLEU-4 improved from 0.0500 to 0.0517. Saving model...
+
+Epoch 9/20
+Epoch 9/20 [Training]: 100%|██████████| 1012/1012 [07:51]
+Epoch 9 - Average Training Loss: 3.1788
+Epoch 9/20 [Validation]: 100%|██████████| 253/253 [03:43]
+Validation Results - Epoch 9: Avg Loss: 3.5505
+BLEU-1: 0.2605
+BLEU-2: 0.1393
+BLEU-3: 0.0822
+BLEU-4: 0.0498
+BLEU-4 did not improve. Best BLEU-4: 0.0517. Epochs without improvement: 1/5
+
+Epoch 10/20
+Epoch 10/20 [Training]: 100%|██████████| 1012/1012 [07:53]
+Epoch 10 - Average Training Loss: 3.0746
+Epoch 10/20 [Validation]: 100%|██████████| 253/253 [03:48]
+Validation Results - Epoch 10: Avg Loss: 3.5160
+BLEU-1: 0.2660
+BLEU-2: 0.1430
+BLEU-3: 0.0855
+BLEU-4: 0.0533
+BLEU-4 improved from 0.0517 to 0.0533. Saving model...
+
+Epoch 11/20
+Epoch 11/20 [Training]: 100%|██████████| 1012/1012 [07:51]
+Epoch 11 - Average Training Loss: 2.9800
+Validation Results - Epoch 11: Avg Loss: 3.4901
+BLEU-1: 0.2662
+BLEU-2: 0.1440
+BLEU-3: 0.0858
+BLEU-4: 0.0531
+BLEU-4 did not improve. Best BLEU-4: 0.0533. Epochs without improvement: 1/5
+
+Epoch 12/20
+Epoch 12/20 [Training]: 100%|██████████| 1012/1012 [07:52]
+Epoch 12 - Average Training Loss: 2.8911
+Validation Results - Epoch 12: Avg Loss: 3.4747
+BLEU-1: 0.2676
+BLEU-2: 0.1438
+BLEU-3: 0.0851
+BLEU-4: 0.0527
+BLEU-4 did not improve. Best BLEU-4: 0.0533. Epochs without improvement: 2/5
+
+Epoch 13/20
+Epoch 13/20 [Training]: 100%|██████████| 1012/1012 [07:52]
+Epoch 13 - Average Training Loss: 2.8086
+Validation Results - Epoch 13: Avg Loss: 3.4569
+BLEU-1: 0.2669
+BLEU-2: 0.1440
+BLEU-3: 0.0863
+BLEU-4: 0.0535
+BLEU-4 improved from 0.0533 to 0.0535. Saving model...
+
+Epoch 14/20
+Epoch 14/20 [Training]: 100%|██████████| 1012/1012 [07:51]
+Epoch 14 - Average Training Loss: 2.7284
+Validation Results - Epoch 14: Avg Loss: 3.4441
+BLEU-1: 0.2665
+BLEU-2: 0.1436
+BLEU-3: 0.0854
+BLEU-4: 0.0529
+BLEU-4 did not improve. Best BLEU-4: 0.0535. Epochs without improvement: 1/5
+
+Epoch 15/20
+Epoch 15/20 [Training]: 100%|██████████| 1012/1012 [07:52]
+Epoch 15 - Average Training Loss: 2.6532
+Validation Results - Epoch 15: Avg Loss: 3.4265
+BLEU-1: 0.2616
+BLEU-2: 0.1397
+BLEU-3: 0.0833
+BLEU-4: 0.0517
+BLEU-4 did not improve. Best BLEU-4: 0.0535. Epochs without improvement: 2/5
+
+Epoch 16/20
+Epoch 16/20 [Training]: 100%|██████████| 1012/1012 [07:52]
+Epoch 16 - Average Training Loss: 2.5828
+Epoch 16/20 [Validation]: 100%|██████████| 253/253 [03:51]
+Validation Results - Epoch 16: Avg Loss: 3.4226
+BLEU-1: 0.2684
+BLEU-2: 0.1436
+BLEU-3: 0.0854
+BLEU-4: 0.0529
+BLEU-4 did not improve. Best BLEU-4: 0.0535. Epochs without improvement: 3/5
+
+Epoch 17/20
+Epoch 17/20 [Training]: 100%|██████████| 1012/1012 [07:52]
+Epoch 17 - Average Training Loss: 2.4328
+Epoch 17/20 [Validation]: 100%|██████████| 253/253 [03:48]
+Validation Results - Epoch 17: Avg Loss: 3.4210
+BLEU-1: 0.2689
+BLEU-2: 0.1447
+BLEU-3: 0.0865
+BLEU-4: 0.0539
+BLEU-4 improved from 0.0535 to 0.0539. Saving model...
+
+Epoch 18/20
+Epoch 18/20 [Training]: 100%|██████████| 1012/1012 [07:52]
+Epoch 18 - Average Training Loss: 2.3931
+Epoch 18/20 [Validation] - Generating captions and calculating BLEU...
+Validation Results - Epoch 18: Avg Loss: 3.4259
+BLEU-1: 0.2666
+BLEU-2: 0.1429
+BLEU-3: 0.0852
+BLEU-4: 0.0532
+
+Epoch 19/20
+Epoch 19/20 [Training]: 100%|██████████| 1012/1012 [07:52]
+Epoch 19 - Average Training Loss: 2.3700
+Epoch 19/20 [Validation]: 100%|██████████| 253/253 [03:47]
+Validation Results - Epoch 19: Avg Loss: 3.4320
+BLEU-1: 0.2674
+BLEU-2: 0.1425
+BLEU-3: 0.0843
+BLEU-4: 0.0524
+
+Epoch 20/20
+Epoch 20/20 [Training]: 100%|██████████| 1012/1012 [07:52]
+Epoch 20 - Average Training Loss: 2.3488
+Epoch 20/20 [Validation]: 100%|██████████| 253/253 [03:46]
+Validation Results - Epoch 20: Avg Loss: 3.4374
+BLEU-1: 0.2693
+BLEU-2: 0.1451
+BLEU-3: 0.0869
+BLEU-4: 0.0547
+BLEU-4 improved from 0.0539 to 0.0547. Saving model...
+
+Training finished.

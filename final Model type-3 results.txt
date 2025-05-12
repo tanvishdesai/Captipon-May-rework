@@ -1,0 +1,293 @@
+--- 7.2 Preparing Datasets ---
+Aggregating captions per image: 100%|██████████| 40460/40460 [00:07<00:00, 5500.04it/s]
+Total unique images with files: 8091
+Train unique images: 6472, Val unique images: 1619
+Initializing SimpleDataset. Samples will be set externally.
+Train dataset (flattened image-caption pairs): 32360
+Validation dataset (unique images): 1619
+Train loader: 1012 batches. Val loader: 51 batches.
+--- 7.3 Initializing Model, Optimizer, Criterion ---
+Model initialized. Trainable params: 19,298,688
+
+Epoch 1/20
+Epoch 1/20 [Training]: 100%|██████████| 1012/1012 [04:57]
+Epoch 1 - Training Duration: 297.10s (4.95m), Avg Loss: 4.3096
+Epoch 1 Validation Metrics (BLEU 0-1, others 0-100):
+  bleu-1: 0.5457
+  bleu-2: 0.3833
+  bleu-3: 0.2499
+  bleu-4: 0.1598
+  meteor: 38.6656
+  rouge1: 0.0000
+  rouge2: 0.0000
+  rougeL: 0.0000
+BLEU-4 improved from -1.0000 to 0.1598. Saving model...
+
+Epoch 2/20
+Epoch 2/20 [Training]: 100%|██████████| 1012/1012 [04:30]
+Epoch 2 - Training Duration: 270.72s (4.51m), Avg Loss: 3.5058
+Evaluating: 100%|██████████| 51/51 [01:09]
+Epoch 2 Validation Metrics (BLEU 0-1, others 0-100):
+  bleu-1: 0.5492
+  bleu-2: 0.3881
+  bleu-3: 0.2554
+  bleu-4: 0.1647
+  meteor: 38.7817
+  rouge1: 0.0000
+  rouge2: 0.0000
+  rougeL: 0.0000
+BLEU-4 improved from 0.1598 to 0.1647. Saving model...
+
+Epoch 3/20
+Epoch 3/20 [Training]: 100%|██████████| 1012/1012 [04:30]
+Epoch 3 - Training Duration: 270.83s (4.51m), Avg Loss: 3.1596
+Evaluating: 100%|██████████| 51/51 [01:49]
+Epoch 3 Validation Metrics (BLEU 0-1, others 0-100):
+  bleu-1: 0.5236
+  bleu-2: 0.3684
+  bleu-3: 0.2427
+  bleu-4: 0.1569
+  meteor: 40.3568
+  rouge1: 0.0000
+  rouge2: 0.0000
+  rougeL: 0.0000
+
+Epoch 4/20
+Epoch 4/20 [Training]: 100%|██████████| 1012/1012 [04:29]
+Epoch 4 - Training Duration: 269.90s (4.50m), Avg Loss: 2.9149
+Evaluating: 100%|██████████| 51/51 [01:35]
+Epoch 4 Validation Metrics (BLEU 0-1, others 0-100):
+  bleu-1: 0.5632
+  bleu-2: 0.4031
+  bleu-3: 0.2669
+  bleu-4: 0.1739
+  meteor: 41.1223
+  rouge1: 0.0000
+  rouge2: 0.0000
+  rougeL: 0.0000
+BLEU-4 improved from 0.1647 to 0.1739. Saving model...
+
+Epoch 5/20
+Epoch 5/20 [Training]: 100%|██████████| 1012/1012 [04:32]
+Epoch 5 - Training Duration: 272.48s (4.54m), Avg Loss: 2.7244
+Evaluating: 100%|██████████| 51/51 [01:51]
+Epoch 5 Validation Metrics (BLEU 0-1, others 0-100):
+  bleu-1: 0.5654
+  bleu-2: 0.4049
+  bleu-3: 0.2677
+  bleu-4: 0.1742
+  meteor: 41.4893
+  rouge1: 0.0000
+  rouge2: 0.0000
+  rougeL: 0.0000
+BLEU-4 improved from 0.1739 to 0.1742. Saving model...
+
+Epoch 6/20
+Epoch 6/20 [Training]: 100%|██████████| 1012/1012 [04:34]
+Epoch 6 - Training Duration: 274.34s (4.57m), Avg Loss: 2.5728
+Evaluating: 100%|██████████| 51/51 [01:41]
+Epoch 6 Validation Metrics (BLEU 0-1, others 0-100):
+  bleu-1: 0.5596
+  bleu-2: 0.3964
+  bleu-3: 0.2584
+  bleu-4: 0.1683
+  meteor: 40.1920
+  rouge1: 0.0000
+  rouge2: 0.0000
+  rougeL: 0.0000
+
+Epoch 7/20
+Epoch 7/20 [Training]: 100%|██████████| 1012/1012 [04:26]
+Epoch 7 - Training Duration: 266.38s (4.44m), Avg Loss: 2.4441
+Evaluating: 100%|██████████| 51/51 [01:48]
+Epoch 7 Validation Metrics (BLEU 0-1, others 0-100):
+  bleu-1: 0.5562
+  bleu-2: 0.3990
+  bleu-3: 0.2590
+  bleu-4: 0.1644
+  meteor: 40.5410
+  rouge1: 0.0000
+  rouge2: 0.0000
+  rougeL: 0.0000
+
+Epoch 8/20
+Epoch 8/20 [Training]: 100%|██████████| 1012/1012 [04:24]
+Epoch 8 - Training Duration: 264.21s (4.40m), Avg Loss: 2.3363
+Evaluating: 100%|██████████| 51/51 [01:39]
+Epoch 8 Validation Metrics (BLEU 0-1, others 0-100):
+  bleu-1: 0.5522
+  bleu-2: 0.3914
+  bleu-3: 0.2557
+  bleu-4: 0.1648
+  meteor: 40.8670
+  rouge1: 0.0000
+  rouge2: 0.0000
+  rougeL: 0.0000
+
+Epoch 9/20
+Epoch 9/20 [Training]: 100%|██████████| 1012/1012 [04:29]
+Epoch 9 - Training Duration: 269.31s (4.49m), Avg Loss: 2.2427
+Evaluating: 100%|██████████| 51/51 [01:48]
+Epoch 9 Validation Metrics (BLEU 0-1, others 0-100):
+  bleu-1: 0.5525
+  bleu-2: 0.3906
+  bleu-3: 0.2524
+  bleu-4: 0.1631
+  meteor: 40.3934
+  rouge1: 0.0000
+  rouge2: 0.0000
+  rougeL: 0.0000
+
+Epoch 10/20
+Epoch 10/20 [Training]: 100%|██████████| 1012/1012 [04:26]
+Epoch 10 - Training Duration: 266.37s (4.44m), Avg Loss: 2.1565
+Evaluating: 100%|██████████| 51/51 [01:45]
+Epoch 10 Validation Metrics (BLEU 0-1, others 0-100):
+  bleu-1: 0.5601
+  bleu-2: 0.3978
+  bleu-3: 0.2597
+  bleu-4: 0.1700
+  meteor: 40.6683
+  rouge1: 0.0000
+  rouge2: 0.0000
+  rougeL: 0.0000
+
+Epoch 11/20
+Epoch 11/20 [Training]: 100%|██████████| 1012/1012 [04:26]
+Epoch 11 - Training Duration: 266.13s (4.44m), Avg Loss: 2.0834
+Evaluating: 100%|██████████| 51/51 [01:41]
+Epoch 11 Validation Metrics (BLEU 0-1, others 0-100):
+  bleu-1: 0.5489
+  bleu-2: 0.3913
+  bleu-3: 0.2548
+  bleu-4: 0.1661
+  meteor: 39.8990
+  rouge1: 0.0000
+  rouge2: 0.0000
+  rougeL: 0.0000
+
+Epoch 12/20
+Epoch 12/20 [Training]: 100%|██████████| 1012/1012 [04:24]
+Epoch 12 - Training Duration: 264.70s (4.41m), Avg Loss: 2.0144
+Evaluating: 100%|██████████| 51/51 [01:42]
+Epoch 12 Validation Metrics (BLEU 0-1, others 0-100):
+  bleu-1: 0.5534
+  bleu-2: 0.3925
+  bleu-3: 0.2548
+  bleu-4: 0.1646
+  meteor: 40.4817
+  rouge1: 0.0000
+  rouge2: 0.0000
+  rougeL: 0.0000
+
+Epoch 13/20
+Epoch 13/20 [Training]: 100%|██████████| 1012/1012 [04:28]
+Epoch 13 - Training Duration: 268.97s (4.48m), Avg Loss: 1.9547
+Evaluating: 100%|██████████| 51/51 [01:41]
+Epoch 13 Validation Metrics (BLEU 0-1, others 0-100):
+  bleu-1: 0.5492
+  bleu-2: 0.3915
+  bleu-3: 0.2558
+  bleu-4: 0.1666
+  meteor: 40.0008
+  rouge1: 0.0000
+  rouge2: 0.0000
+  rougeL: 0.0000
+
+Epoch 14/20
+Epoch 14/20 [Training]: 100%|██████████| 1012/1012 [04:26]
+Epoch 14 - Training Duration: 266.43s (4.44m), Avg Loss: 1.9002
+Evaluating: 100%|██████████| 51/51 [01:42]
+Epoch 14 Validation Metrics (BLEU 0-1, others 0-100):
+  bleu-1: 0.5482
+  bleu-2: 0.3898
+  bleu-3: 0.2506
+  bleu-4: 0.1592
+  meteor: 40.0479
+  rouge1: 0.0000
+  rouge2: 0.0000
+  rougeL: 0.0000
+
+Epoch 15/20
+Epoch 15/20 [Training]: 100%|██████████| 1012/1012 [04:26]
+Epoch 15 - Training Duration: 266.79s (4.45m), Avg Loss: 1.8496
+Evaluating: 100%|██████████| 51/51 [01:41]
+Epoch 15 Validation Metrics (BLEU 0-1, others 0-100):
+  bleu-1: 0.5555
+  bleu-2: 0.3936
+  bleu-3: 0.2567
+  bleu-4: 0.1656
+  meteor: 40.6714
+  rouge1: 0.0000
+  rouge2: 0.0000
+  rougeL: 0.0000
+
+Epoch 16/20
+Epoch 16/20 [Training]: 100%|██████████| 1012/1012 [04:23]
+Epoch 16 - Training Duration: 263.81s (4.40m), Avg Loss: 1.8023
+Evaluating: 100%|██████████| 51/51 [01:44]
+Epoch 16 Validation Metrics (BLEU 0-1, others 0-100):
+  bleu-1: 0.5458
+  bleu-2: 0.3847
+  bleu-3: 0.2452
+  bleu-4: 0.1565
+  meteor: 39.8108
+  rouge1: 0.0247
+  rouge2: 0.0000
+  rougeL: 0.0247
+
+Epoch 17/20
+Epoch 17/20 [Training]: 100%|██████████| 1012/1012 [04:22]
+Epoch 17 - Training Duration: 262.01s (4.37m), Avg Loss: 1.7588
+Evaluating: 100%|██████████| 51/51 [01:31]
+Epoch 17 Validation Metrics (BLEU 0-1, others 0-100):
+  bleu-1: 0.5416
+  bleu-2: 0.3759
+  bleu-3: 0.2388
+  bleu-4: 0.1495
+  meteor: 40.1036
+  rouge1: 0.0000
+  rouge2: 0.0000
+  rougeL: 0.0000
+
+Epoch 18/20
+Epoch 18/20 [Training]: 100%|██████████| 1012/1012 [04:34]
+Epoch 18 - Training Duration: 274.82s (4.58m), Avg Loss: 1.7207
+Evaluating: 100%|██████████| 51/51 [01:37]
+Epoch 18 Validation Metrics (BLEU 0-1, others 0-100):
+  bleu-1: 0.5604
+  bleu-2: 0.3960
+  bleu-3: 0.2561
+  bleu-4: 0.1634
+  meteor: 40.3755
+  rouge1: 0.0000
+  rouge2: 0.0000
+  rougeL: 0.0000
+
+Epoch 19/20
+Epoch 19/20 [Training]: 100%|██████████| 1012/1012 [04:28]
+Epoch 19 - Training Duration: 268.48s (4.47m), Avg Loss: 1.6838
+Evaluating: 100%|██████████| 51/51 [01:33]
+Epoch 19 Validation Metrics (BLEU 0-1, others 0-100):
+  bleu-1: 0.5476
+  bleu-2: 0.3874
+  bleu-3: 0.2540
+  bleu-4: 0.1644
+  meteor: 40.1121
+  rouge1: 0.0124
+  rouge2: 0.0000
+  rougeL: 0.0124
+
+Epoch 20/20
+Epoch 20/20 [Training]: 100%|██████████| 1012/1012 [04:21]
+Epoch 20 - Training Duration: 261.82s (4.36m), Avg Loss: 1.6465
+Evaluating: 100%|██████████| 51/51 [01:38]
+Epoch 20 Validation Metrics (BLEU 0-1, others 0-100):
+  bleu-1: 0.5475
+  bleu-2: 0.3876
+  bleu-3: 0.2518
+  bleu-4: 0.1608
+  meteor: 40.3595
+  rouge1: 0.0000
+  rouge2: 0.0000
+  rougeL: 0.0000
