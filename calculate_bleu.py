@@ -80,5 +80,5 @@ def calculate_corpus_bleu_scores(csv_filepath):
 if __name__ == "__main__":
     # Path to your CSV file
     # Make sure this path is correct and accessible from where you run the script.
-    csv_file_path = r"final Mode type-3 output\30k\light-weight-model-30k.csv"
+    csv_file_path = r"C:\Users\DELL\Downloads\all_images_predictions_diag_v1 (1).csv"
     calculate_corpus_bleu_scores(csv_file_path) 
