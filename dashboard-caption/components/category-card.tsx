@@ -2,7 +2,6 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight } from "lucide-react"
 
 interface CategoryCardProps {
@@ -13,60 +12,40 @@ interface CategoryCardProps {
   languages: string[]
 }
 
-export function CategoryCard({ title, description, href, icon, languages }: CategoryCardProps) {
-  // Only show the first 6 languages and indicate there are more if needed
-  const displayLanguages = languages.slice(0, 6)
-  const hasMoreLanguages = languages.length > 6
-  
+export function CategoryCard({ title, description, href, icon }: CategoryCardProps) {
   return (
-    <Link href={href} className="block h-full overflow-hidden rounded-lg">
-      <motion.div
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
-        className="h-full"
-      >
-        <Card className="h-full flex flex-col overflow-hidden border-2 border-neutral-300/50 dark:border-zinc-700/50 bg-neutral-100/50 dark:bg-neutral-900/50 backdrop-blur-md transition-all group relative shadow-lg hover:shadow-purple-500/30 dark:hover:shadow-purple-800/30">
-          <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-purple-500 via-purple-600 to-indigo-600 rounded-t-lg" />
-          <CardHeader className="pb-2 flex flex-row items-center justify-between pt-4">
-            <div className="flex items-center gap-2 text-purple-600 dark:text-purple-400">{icon}<span className="text-lg">🗂️</span></div>
-            <motion.div 
-              whileHover={{ x: 5 }}
-              className="text-muted-foreground"
-            >
-              <ArrowRight size={18} />
-            </motion.div>
-          </CardHeader>
-          <CardTitle className="text-xl px-6">{title}</CardTitle>
-          <CardDescription className="px-6 text-sm text-neutral-600 dark:text-neutral-400 min-h-[40px]">
-            {description}
-          </CardDescription>
-          <CardContent className="pb-2 px-6 flex-grow">
-            <div className="grid grid-cols-2 gap-1.5 mt-2">
-              {displayLanguages.map((language) => (
-                <motion.span 
-                  key={language} 
-                  className="inline-flex items-center justify-center text-center rounded-md px-2 py-1 text-xs font-medium bg-neutral-200/70 dark:bg-neutral-800/60 border-neutral-300 dark:border-zinc-700 shadow-sm transition-colors hover:bg-purple-100 dark:hover:bg-purple-900/30 hover:text-purple-700 dark:hover:text-purple-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  {language}
-                </motion.span>
-              ))}
-              {hasMoreLanguages && (
-                <motion.span 
-                  className="inline-flex items-center justify-center text-center rounded-md px-2 py-1 text-xs font-medium bg-neutral-200/70 dark:bg-neutral-800/60 border-neutral-300 dark:border-zinc-700 shadow-sm text-purple-600 dark:text-purple-400"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  +{languages.length - 6} more
-                </motion.span>
-              )}
-            </div>
-          </CardContent>
-          <CardFooter className="px-6 pb-4">
-            <p className="text-sm text-muted-foreground">Click to explore</p>
-          </CardFooter>
-          <div className="absolute inset-0 rounded-lg pointer-events-none group-hover:ring-2 group-hover:ring-purple-500/70 transition-all" />
-        </Card>
-      </motion.div>
-    </Link>
+    <motion.div
+      whileHover={{ y: -6, boxShadow: "0 8px 32px 0 rgba(124, 58, 237, 0.15)" }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      className="bg-white/60 dark:bg-zinc-900/60 border border-neutral-200 dark:border-zinc-800 rounded-2xl shadow-lg backdrop-blur-md p-0 flex flex-col w-full max-w-xs mx-auto min-h-[260px] relative overflow-hidden group"
+    >
+      <Link href={href} className="flex flex-col h-full w-full no-underline focus:outline-none">
+        {/* Icon */}
+        <div className="flex justify-center items-center mt-6 mb-2">
+          <span className="text-4xl md:text-5xl text-purple-600 dark:text-purple-400 drop-shadow-lg">{icon}</span>
+        </div>
+        {/* Title */}
+        <h2 className="text-center text-xl font-bold text-neutral-900 dark:text-neutral-100 mb-1 px-4">{title}</h2>
+        {/* Description */}
+        <p className="text-center text-sm text-neutral-600 dark:text-neutral-400 mb-6 px-6 min-h-[40px]">{description}</p>
+        <div className="flex-1" />
+        {/* Explore Button */}
+        <div className="flex justify-end items-end px-6 pb-6 mt-auto">
+          <motion.button
+            whileHover={{ scale: 1.07 }}
+            className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-md transition-colors focus:outline-none focus:ring-2 focus:ring-purple-400"
+            tabIndex={-1}
+            aria-label={`Explore ${title}`}
+          >
+            Explore <ArrowRight size={18} />
+          </motion.button>
+        </div>
+        {/* Glassy overlay for hover effect */}
+        <motion.div
+          aria-hidden
+          className="absolute inset-0 pointer-events-none rounded-2xl group-hover:bg-purple-100/10 group-hover:ring-2 group-hover:ring-purple-400/40 transition-all"
+        />
+      </Link>
+    </motion.div>
   )
 } 

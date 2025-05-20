@@ -1,8 +1,7 @@
 "use client"
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Progress } from "@/components/ui/progress"
-import { Clock, CheckCircle } from "lucide-react"
+import { Clock, CheckCircle, Loader2, CalendarCheck2 } from "lucide-react"
 
 interface Task {
   id: string
@@ -19,88 +18,75 @@ interface TaskListProps {
   completedTasks: Task[]
 }
 
-export function TaskList({ executingTasks, completedTasks }: TaskListProps) {
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString)
-    return new Intl.DateTimeFormat("en-US", {
-      month: "short",
-      day: "numeric",
-      hour: "numeric",
-      minute: "numeric",
-    }).format(date)
-  }
 
+
+export function TaskList({ executingTasks, completedTasks }: TaskListProps) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <Card className="overflow-hidden border-2 border-neutral-300/50 dark:border-zinc-700/50 bg-neutral-100/50 dark:bg-neutral-900/50 backdrop-blur-md shadow-lg group relative transition-all hover:shadow-purple-500/30 dark:hover:shadow-purple-800/30">
-        <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-purple-500 via-purple-600 to-indigo-600 rounded-t-lg" />
-        <CardHeader className="pt-4">
-          <CardTitle className="flex items-center gap-2">
-            <Clock className="h-5 w-5 text-purple-600 dark:text-purple-400" />
-            <span>Currently Executing</span>
-            <span className="text-lg">⏳</span>
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+      {/* Active Tasks */}
+      <section>
+        <Card className="h-full shadow-lg border-0 bg-white/80 dark:bg-zinc-900/80">
+          <CardHeader className="border-b border-neutral-200/60 dark:border-zinc-700/60 bg-gradient-to-r from-purple-500/10 to-indigo-500/10 pb-4">
+            <CardTitle className="flex items-center gap-2.5 text-lg font-semibold">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-purple-100 dark:bg-purple-900/20">
+                <Loader2 className="h-5 w-5 text-purple-600 animate-spin" aria-hidden="true" />
+              </div>
+              <span className="text-neutral-800 dark:text-neutral-200">Active Tasks</span>
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="pt-6 px-4">
             {executingTasks.length === 0 ? (
-              <p className="text-sm text-neutral-600 dark:text-neutral-400">No tasks currently running</p>
+              <div className="text-center text-neutral-500 dark:text-neutral-400 py-8">
+                <span>No active tasks</span>
+              </div>
             ) : (
-              executingTasks.map((task) => (
-                <div key={task.id} className="space-y-2 border-b border-neutral-200/80 dark:border-zinc-700/80 pb-3 last:border-0">
-                  <div className="flex justify-between">
-                    <p className="font-medium text-neutral-800 dark:text-neutral-200">{task.description}</p>
-                    <span className="text-xs text-purple-600 dark:text-purple-400">
-                      {task.progress}%
-                    </span>
-                  </div>
-                  <Progress value={task.progress} className="h-2 bg-gradient-to-r from-purple-500 via-purple-600 to-indigo-600 shadow-md" />
-                  <div className="flex justify-between text-xs text-neutral-500 dark:text-neutral-400">
-                    <span>Started: {formatDate(task.startTime)}</span>
-                    {task.estimatedEndTime && (
-                      <span>Est. completion: {formatDate(task.estimatedEndTime)}</span>
-                    )}
-                  </div>
-                </div>
-              ))
+              <ul className="space-y-4">
+                {executingTasks.map((task) => (
+                  <li key={task.id} className="rounded-lg bg-neutral-100/70 dark:bg-zinc-800/70 p-4 shadow-sm flex items-center gap-3 border border-neutral-200/60 dark:border-zinc-700/60">
+                    <Clock className="h-5 w-5 text-purple-500 flex-shrink-0" aria-hidden="true" />
+                    <span className="font-medium text-neutral-900 dark:text-neutral-100">{task.description}</span>
+                  </li>
+                ))}
+              </ul>
             )}
-          </div>
-        </CardContent>
-        <div className="absolute inset-0 rounded-lg pointer-events-none group-hover:ring-2 group-hover:ring-purple-500/70 transition-all" />
-      </Card>
-      <Card className="overflow-hidden border-2 border-neutral-300/50 dark:border-zinc-700/50 bg-neutral-100/50 dark:bg-neutral-900/50 backdrop-blur-md shadow-lg group relative transition-all hover:shadow-pink-500/30 dark:hover:shadow-orange-800/30">
-        <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-400 rounded-t-lg" />
-        <CardHeader className="pt-4">
-          <CardTitle className="flex items-center gap-2">
-            <CheckCircle className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
-            <span>Completed Executions</span>
-            <span className="text-lg">✅</span>
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* Completed Tasks */}
+      <section>
+        <Card className="h-full shadow-lg border-0 bg-white/80 dark:bg-zinc-900/80">
+          <CardHeader className="border-b border-neutral-200/60 dark:border-zinc-700/60 bg-gradient-to-r from-emerald-400/10 to-yellow-300/10 pb-4">
+            <CardTitle className="flex items-center gap-2.5 text-lg font-semibold">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-900/20">
+                <CalendarCheck2 className="h-5 w-5 text-emerald-600" aria-hidden="true" />
+              </div>
+              <span className="text-neutral-800 dark:text-neutral-200">Completed Tasks</span>
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="pt-6 px-4">
             {completedTasks.length === 0 ? (
-              <p className="text-sm text-neutral-600 dark:text-neutral-400">No completed tasks</p>
+              <div className="text-center text-neutral-500 dark:text-neutral-400 py-8">
+                <span>No completed tasks</span>
+              </div>
             ) : (
-              completedTasks.map((task) => (
-                <div key={task.id} className="space-y-2 border-b border-neutral-200/80 dark:border-zinc-700/80 pb-3 last:border-0">
-                  <div className="flex justify-between">
-                    <p className="font-medium text-neutral-800 dark:text-neutral-200">{task.description}</p>
-                    <span className="text-xs text-emerald-600 dark:text-emerald-400">{task.result}</span>
-                  </div>
-                  <div className="flex justify-between text-xs text-neutral-500 dark:text-neutral-400">
-                    <span>Started: {formatDate(task.startTime)}</span>
-                    {task.endTime && (
-                      <span>Completed: {formatDate(task.endTime)}</span>
+              <ul className="space-y-4">
+                {completedTasks.map((task) => (
+                  <li key={task.id} className="rounded-lg bg-neutral-100/70 dark:bg-zinc-800/70 p-4 shadow-sm flex flex-col gap-2 border border-neutral-200/60 dark:border-zinc-700/60">
+                    <div className="flex items-center gap-3">
+                      <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" aria-hidden="true" />
+                      <span className="font-medium text-neutral-900 dark:text-neutral-100">{task.description}</span>
+                    </div>
+                    {task.result && (
+                      <div className="text-sm text-emerald-700 dark:text-emerald-400 font-semibold ml-8">{task.result}</div>
                     )}
-                  </div>
-                </div>
-              ))
+                  </li>
+                ))}
+              </ul>
             )}
-          </div>
-        </CardContent>
-        <div className="absolute inset-0 rounded-lg pointer-events-none group-hover:ring-2 group-hover:ring-pink-500/70 dark:group-hover:ring-orange-500/70 transition-all" />
-      </Card>
+          </CardContent>
+        </Card>
+      </section>
     </div>
   )
 } 

@@ -4,12 +4,16 @@ import languageData from "@/data/languages.json"
 
 export default function IndianLanguagesPage() {
   return (
-    <>
+    <div className="min-h-screen bg-neutral-100 dark:bg-neutral-950">
       <Navbar />
-      <main className="container py-12">
-        <div className="space-y-6 pb-4">
-          <h1 className="text-3xl font-bold">Indian Languages</h1>
-          <p className="text-muted-foreground max-w-3xl">
+      <main className="container mx-auto px-4 py-24">
+        <div className="text-center space-y-6 max-w-3xl mx-auto mb-16">
+          <h2 className="text-4xl font-bold tracking-tight">
+            <span className="bg-gradient-to-r from-neutral-900 to-neutral-700 dark:from-white dark:to-neutral-300 bg-clip-text text-transparent">
+              Indian Languages
+            </span>
+          </h2>
+          <p className="text-neutral-600 dark:text-neutral-400 text-lg">
             Caption generation models for languages from the Indian subcontinent. Select a language to view its performance metrics.
           </p>
         </div>
@@ -20,6 +24,6 @@ export default function IndianLanguagesPage() {
           ))}
         </div>
       </main>
-    </>
+    </div>
   )
 } 

@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Admin dashboard
+/app/admin/
+/app/api/admin/
+/components/admin/
